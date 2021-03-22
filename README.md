@@ -2,7 +2,7 @@
 
 Prediksi pengguna Bike Share
 
-1. EDA
+### Exploratory Data Analysis
 ...
 
 - [x] Check missing data
@@ -11,17 +11,18 @@ Prediksi pengguna Bike Share
 - [ ] Bike share by day, month, hour (?)
 - [ ] Bike share by weather, temp, hum, wind
 
-2. Machine Learning & Prediction
+### Machine Learning & Prediction
 ...
 
-3. RShiny
+### RShiny
 ...
 
-Group 4 London Bike Share 
+#### Group 4 London Bike Share 
 - Michelle Callista
 - Muhammad Marzuqi Laksamana
 - Patrick Widyanto Oetomo
 - Peter Iskandar
 - Priscilla Agustin 
 
+#### Other
 [Link to London Bike Share Dataset](https://www.kaggle.com/hmavrodiev/london-bike-sharing-dataset)
