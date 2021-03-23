@@ -32,9 +32,12 @@ str(londonBike)
 
 #Data correlation, look at relationship between each data
 
-pairs(londonBike[2:10])             #Matrix plot of scatterplot (lama)
+pairs(londonBike[2:10])                     #Matrix plot of scatterplot
 
-corCoef <- cor(londonBike[2:10])    #Correlation Coeff w/ Pearson correlation
-corrplot(corCoef)                   #Alternative - Correlation Matrix
+dataSample <- sample_n(londonBike, 1000)    #Make data samples (decrease size)
+pairs(dataSample[2:10])
+
+corCoef <- cor(londonBike[2:10])            #Correlation Coeff w/ Pearson correlation
+corrplot(corCoef)                           #Correlation Matrix
 
 #continue..
