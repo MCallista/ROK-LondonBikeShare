@@ -11,9 +11,21 @@ Prediksi pengguna Bike Share
 Bike share by 
 
 - [x] season
+
+![Bike Share by Season](https://github.com/MCallista/ROK-LondonBikeShare/blob/1add235e0591e37635830beeedc3ab79307785c1/season.png)
+
 - [x] weekend
+
+![Bike Share by Weekend](https://github.com/MCallista/ROK-LondonBikeShare/blob/1add235e0591e37635830beeedc3ab79307785c1/weekend.png)
+
 - [x] holiday
+
+![Bike Share by Holiday](https://github.com/MCallista/ROK-LondonBikeShare/blob/1add235e0591e37635830beeedc3ab79307785c1/holiday.png)
+
 - [x] weather
+
+![Bike Share by Weather](https://github.com/MCallista/ROK-LondonBikeShare/blob/1add235e0591e37635830beeedc3ab79307785c1/pictures/weather.png)
+
 - [ ] temp
 - [ ] humidity
 - [ ] wind speed
