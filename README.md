@@ -7,9 +7,17 @@ Prediksi pengguna Bike Share
 
 - [x] Check missing data
 - [x] Correlation
-- [x] Bike share by season, weekend, holiday
+
+Bike share by 
+
+- [x] season
+- [x] weekend
+- [x] holiday
+- [x] weather
+- [ ] temp
+- [ ] humidity
+- [ ] wind speed
 - [ ] Bike share by day, month, hour (?)
-- [ ] Bike share by weather, temp, hum, wind
 
 ### Machine Learning & Prediction
 ...
