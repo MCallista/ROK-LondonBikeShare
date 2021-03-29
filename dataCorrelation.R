@@ -21,6 +21,11 @@
 #26 = snowfall 
 #94 = Freezing Fog
 
+library(dplyr)
+
+#Insert Data (input file path)
+londonBike <- read.csv("C:\\Users\\TOSHIBA\\Downloads\\UPH\\SEM 5\\Riset Operasional\\R Data\\london_merged.csv", header = TRUE)
+
 #Find missing data
 sum(is.na(londonBike))              #Result is 0
 
@@ -40,4 +45,4 @@ pairs(dataSample[2:10])
 corCoef <- cor(londonBike[2:10])            #Correlation Coeff w/ Pearson correlation
 corrplot(corCoef)                           #Correlation Matrix
 
-#continue..
+#continue.. bikeShareComp.R
