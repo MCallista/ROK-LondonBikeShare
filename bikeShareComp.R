@@ -22,4 +22,4 @@ barplot(height=weatherCnt$cnt, names=weatherCnt$weather_code, col=rgb(0,0.6,0.8)
 
 #t1
 t1Cnt <- (londonBike %>% group_by(t1))%>%summarise(cnt = mean(cnt))
-plot(t1Cnt$t1, t1Cnt$cnt, type = "l", xlab = "t1(Real Temperature)", ylab = "cnt", col = "blue")
+plot(t1Cnt$t1, t1Cnt$cnt, type = "l", xlab = "t1(Real Temperature)", ylab = "cnt", main = "Bike share according to t1", col = "blue")
