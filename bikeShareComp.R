@@ -18,4 +18,8 @@ barplot(height = holidayCnt$cnt, names = holidayCnt$is_holiday, col=rgb(0.5,1,0.
 #weather
 weatherCnt <- (londonBike %>% group_by(weather_code))%>%summarise(cnt = mean(cnt))
 barplot(height=weatherCnt$cnt, names=weatherCnt$weather_code, col=rgb(0,0.6,0.8),
-        xlab = "Weather Code", ylab = "Average Bike share", main= "Bike share according to weather")
+        xlab = "Weather Code", ylab = "Average Bike share", main = "Bike share according to weather")
+
+#t1
+t1Cnt <- (londonBike %>% group_by(t1))%>%summarise(cnt = mean(cnt))
+plot(t1Cnt$t1, t1Cnt$cnt, type = "l", xlab = "t1(Real Temperature)", ylab = "cnt", col = "blue")
