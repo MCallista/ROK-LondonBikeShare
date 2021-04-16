@@ -71,13 +71,13 @@ Setelah data dibuat dalam bentuk barplot dan dianalisa, terdapat hal-hal yang me
 
 Selanjutnya analisa akan dilanjutkan dengan variabel t1, t2, hum, dan wind_speed. Hubungan antara variabel ini dengan jumlah bike share sempat dilihat pada bagian **Data Dependency**. Kita akan lihat dengan lebih dekat apakah terdapat hubungan antar variabel tersebut dengan jumlah bike share. Untuk data kuantitatif, tipe grafik yang akan digunakan adalah 
 
-- [ ] temp 1 & 2, humidity, wind speed
+gambar
+
+analisa
 
 Selanjutnya akan dianalisa dengan variabel waktu yang diberikan. Data ini merupakan sebuah data time series, data yang memiliki time stamp atau diurutkan berdasarkan waktu. Disini akan dilakukan analisa dengan membandingkan rata-rata bike share dengan tanggal, hari, bulan, tahun, dan jam. 
 
-<img src="pictures/Date.png" width="450"> <img src="pictures/Days.png" width="450"> 
-<img src="pictures/Month.png" width="450"> <img src="pictures/Year.png" width="450"> 
-**MUNGKIN DIGANTI**
+gambar
 
 Pada grafik pertama, "Bike Share to Date"
 
