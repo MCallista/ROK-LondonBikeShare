@@ -1,4 +1,7 @@
 library(dplyr)
+library(tidyr)
+
+londonBike <- read.csv("[Change with file location]", header = TRUE)
 
 #season
 seasonCnt <- (londonBike %>% group_by(season))%>%summarise(cnt = mean(cnt))
@@ -39,3 +42,32 @@ plot(t2Cnt$t2, t2Cnt$cnt, type = "l",
 windCnt <- (londonBike %>% group_by(wind_speed))%>%summarise(cnt = mean(cnt))
 plot(windCnt$wind_speed, windCnt$cnt, type = "l", 
      xlab = "wind speed", ylab = "cnt", main = "Bike share according to wind speed", col = "blue")
+
+#Separate date and time
+londonBike2 <- separate(londonBike, timestamp, c("date", "time"), sep = " ", drop(FALSE))
+londonBike2 <- separate(londonBike2, date, c("year", "month", "date"), sep = "-")
+londonBike2 <- separate(londonBike2, time, c("hour"), sep = ":")
+
+#date
+boxplot(cnt~date,data=londonBike2, main="Bike Share to Date", 
+        xlab="Date", ylab="Bike Share count", col=rainbow(31, alpha=0.2))
+
+#day of week
+date = substr(londonBike2$timestamp,1,10)
+days <- weekdays(as.Date(date))
+londonBike2$timestamp = days
+
+boxplot(cnt~days,data=londonBike2, main="Bike Share to Days",
+        xlab="Day", ylab="Bike Share count", col=rainbow(7, alpha=0.2))
+
+#month
+boxplot(cnt~month,data=londonBike2, main="Bike Share to Month", 
+        xlab="Month", ylab="Bike Share count", col=rainbow(12, alpha=0.2))
+
+#year
+boxplot(cnt~year,data=londonBike2, main="Bike Share to Year", 
+        xlab="Year", ylab="Bike Share count", col=rainbow(3, alpha=0.2))
+
+#hour
+boxplot(cnt~hour,data=londonBike2, main="Bike Share to Hour", 
+        xlab="Hour", ylab="Bike Share count", col=rainbow(24, alpha=0.2))
