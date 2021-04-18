@@ -35,7 +35,7 @@ plot(t2Cnt$t2, t2Cnt$cnt, type = "l",
 
 #humidity
 humCnt <- (londonBike %>% group_by(hum))%>%summarise(cnt = mean(cnt))
-plot(t2Cnt$t2, t2Cnt$cnt, type = "l", 
+plot(humCnt$hum, humCnt$cnt, type = "l", 
      xlab = "humidity", ylab = "cnt", main = "Bike share according to humidity", col = "blue")
 
 #wind speed
