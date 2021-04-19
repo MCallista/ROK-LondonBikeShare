@@ -35,7 +35,7 @@ Setelah mengenal data, akan dilanjutkan dengan descriptive statistics atau ringk
 
 Persiapan data, info data dan kode untuk bagian korelasi dapat dilihat lebih jelas di file [dataCorrelation.R](dataCorrelation.R)
 
-### Data Dependenct - Correlation
+### Data Dependency - Correlation
 
 <img src="pictures/RplotSamp.png" width="900">
 
@@ -56,24 +56,21 @@ Dari tampilan mengenai korelasi antar variabel yang telah disampaikan sebelumnya
 - Sebaliknya, hum (persentase kelembapan) dengan cnt (jumlah bike share) memiliki negative correlation, yang berarti terdapat kecenderungan meningkatnya jumlah bike share dengan menurunnya persentase kelembapan pada saat itu.
 - Variabel yang lain tidak memiliki hubungan yang kuat dengan cnt (jumlah bike share) oleh karena nilai correlation coefficient hanya berkisar antara 0.1. Jika dilihat pada tabel diatas, berarti tidak relevan atau tidak terdapat hubungan yang cukup jelas. Hal ini terjadi karena variabel weather_code, is_holiday, is_weekend, dan season adalah data kategorikal yang memiliki arti untuk tiap angka yang terdapat dalam data. Hubungan dengan data kategorikal akan di analisa kembali di bagian selanjutnya.
 
-Gambar pada bagian ini dapat dilihat dengan lebih jelas disini:
-- [Scatterplot Matrix](pictures/RplotSamp.png)
-- [Correlation Table](pictures/RCorTable.PNG)
-
 ### Bike Share Comparison
 
 Pada bagian ini akan dianalisa lebih lanjut hubungan antara variabel yang ada dengan jumlah bike share. Hal ini akan dilakukan dengan membuat bar plot yang membandingkan rata-rata jumlah bike share berdasarkan faktor yang ada. Empat variabel pertama yang akan dianalisa adalah season, is_weekend, is_holiday, dan weather_code yang bersifat kategorikal.
 
-<img src="season.png" width="450"> <img src="weekend.png" width="450"> 
-<img src="holiday.png" width="450"> <img src="pictures/weather.png" width="450"> 
+<img src="pictures/season.png" width="450"> <img src="pictures/weekend.png" width="450"> 
+<img src="pictures/holiday.png" width="450"> <img src="pictures/weather.png" width="450"> 
 
 Setelah data dibuat dalam bentuk barplot dan dianalisa, terdapat hal-hal yang membuat peminjaman sepeda meningkat ataupun menurun. Jika dilihat dari peminjaman sepeda pada musim yang berbeda, terdapat perbedaan rata-rata dalam jumlah peminjaman sepeda. Dari barplot bisa diambil bahwa rata-rata paling banyak saat musim 1 (summer) dan kebalikannya, yang paling sedikit saat musim 3 (winter). Selain itu, peminjaman sepeda juga terdampak dari apakah sedang weekend atau tidak, dimana 0 (not weekend)  mengalami rata-rata jumlah peminjamaan yang lebih banyak. Barplot juga menjelaskan bahwa rata-rata jumlah peminjaman sepeda pada hari libur lebih banyak dibandingkan saat hari biasa. Dan terakhir adalah peminjaman sepeda menurut cuaca. Yang bisa kami ambil adalah nomor 2 (cattered clouds / few clouds) memiliki rata-rata peminjaman sepeda yang paling banyak dibandingkan yang lan terutama saat cuaca 26 (snowfall). 
 
 Selanjutnya analisa akan dilanjutkan dengan variabel t1, t2, hum, dan wind_speed. Hubungan antara variabel ini dengan jumlah bike share sempat dilihat pada bagian **Data Dependency**. Kita akan lihat dengan lebih dekat apakah terdapat hubungan antar variabel tersebut dengan jumlah bike share. Untuk data kuantitatif, tipe grafik yang akan digunakan adalah 
 
-gambar
+<img src="pictures/t1.png" width="450"> <img src="pictures/t2.png" width="450"> 
+<img src="pictures/humidity.png" width="450"> <img src="pictures/windspeed.png" width="450">
 
-analisa
+**analisa**
 
 Selanjutnya akan dianalisa dengan variabel waktu yang diberikan. Data ini merupakan sebuah data time series, data yang memiliki time stamp atau diurutkan berdasarkan waktu. Disini akan dilakukan analisa dengan membandingkan rata-rata bike share dengan tanggal, hari, bulan, tahun, dan jam. 
 
@@ -86,10 +83,14 @@ Kesimpulan Analisa:
 - Y
 
 ## Machine Learning & Prediction
-...
+
+### Prophet
 
 ## RShiny
 ...
+
+#### Kontribusi
+
 
 #### Group 4 London Bike Share 
 - Michelle Callista
