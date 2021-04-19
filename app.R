@@ -4,12 +4,11 @@ library(shinydashboard)
 library(ggplot2)
 library(dplyr)
 #Importing datasets
-bike <- read.csv("C:/Users/zuqil/Desktop/ROK-LondonBikeShare-main/bike_merged.csv")
+bike <- read.csv("[location]")
 bike$yr <- as.factor(bike$yr)
 bike$mnth <- factor(bike$mnth, levels = c('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'))
 bike$weekday <- factor(bike$weekday, levels = c('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'))
 bike$season <- factor(bike$season, levels = c('Spring', 'Summer', 'Fall', 'Winter'))
-#R Shiny ui
 #R Shiny ui
 ui <- dashboardPage(
   
