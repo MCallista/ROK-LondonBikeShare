@@ -13,7 +13,7 @@ bike$season <- factor(bike$season, levels = c('Spring', 'Summer', 'Fall', 'Winte
 ui <- dashboardPage(
   
   #Dashboard title
-  dashboardHeader(title = 'BIKE SHARING EXPLORER', 
+  dashboardHeader(title = 'LONDON BIKE SHARE', 
                   titleWidth = 290),
   #Sidebar layout
   dashboardSidebar(width = 290,
