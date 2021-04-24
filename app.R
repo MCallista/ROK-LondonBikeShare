@@ -30,8 +30,8 @@ ui <- dashboardPage(
       #Plots tab content
       tabItem('plots', 
               #Histogram filter
-              box(status = 'primary', title = 'eda-barplot', 
-                  selectInput('val', 'Variables:', c('Season', 'Weekend', 'Holiday', 'Weather')),
+              box(status = 'primary', title = 'eda', 
+                  selectInput('val', 'Variables:', c('Season', 'Weekend', 'Holiday', 'Weather','T1', 'T2', 'Humidity', 'Wind Speed')),
                   
                   footer = ''),
               #Boxes to display the plots
@@ -43,22 +43,42 @@ server <- function(input, output) {
     val = ifelse(input$val == 'Season', 'ssn',
                      ifelse(input$val == 'Weekend', 'wk',
                                    ifelse(input$val == 'Holiday', 'hd',
-                                          ifelse(input$val == 'Weather', 'wh',))))
+                                          ifelse(input$val == 'Weather', 'wh',
+                                                 ifelse(input$val == 'T1', 't1',
+                                                    ifelse(input$val == 'T2', 't2',
+                                                         ifelse(input$val == 'Humidity', 'hm',
+                                                                ifelse(input$val == 'Wind Speed', 'ws'))))))))
     if(val=='ssn'){
       barplot(height = season$cnt, names = season$season, col=rgb(0.9,0.3,0.2),
               xlab = "season code", ylab = "Average Bike Share", main = "Bike share according to season")
     }
-    if(val=='wk'){
+    if(val == 'wk'){
       barplot(height = weekend$cnt, names=weekend$is_weekend, col=rgb(1,1,0.5),
               xlab = "weekend code" , ylab = "Average Bike Share", main = "Bike share according to weekend")
     }
-    if(val=='hd'){
+    if(val == 'hd'){
       barplot(height = holiday$cnt, names = holiday$is_holiday, col=rgb(0.5,1,0.3),
               xlab = "holiday code", ylab = "Average Bike Share", main = "Bike share according to holiday")
     }
-    if(val=='wh'){
+    if(val == 'wh'){
       barplot(height=weather$cnt, names=weather$weather_code, col=rgb(0,0.6,0.8),
               xlab = "Weather Code", ylab = "Average Bike share", main = "Bike share according to weather")
+    }
+    if(val == 't1'){
+      plot(t1$t1, t1$cnt, type = "l", 
+           xlab = "t1(Real Temperature)", ylab = "cnt", main = "Bike share according to t1", col = "blue")
+    }
+    if(val == 't2'){
+      plot(t2$t2, t2$cnt, type = "l", 
+           xlab = "t2(Temperature Feels Like)", ylab = "cnt", main = "Bike share according to t2", col = "blue")
+    }
+    if(val == 'hm'){
+      plot(hum$hum, hum$cnt, type = "l", 
+           xlab = "humidity", ylab = "cnt", main = "Bike share according to humidity", col = "blue")
+    }
+    if(val == 'ws'){
+      plot(wind$wind_speed, wind$cnt, type = "l", 
+           xlab = "wind speed", ylab = "cnt", main = "Bike share according to wind speed", col = "blue")
     }
   })
 }
