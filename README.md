@@ -100,6 +100,8 @@ Kesimpulan Analisa:
 ## Machine Learning & Prediction
 
 ### Prophet
+#### Theory
+Prophet adalah prosedur untuk meramalkan data deret waktu berdasarkan model aditif di mana tren non-linier sesuai dengan musim tahunan, mingguan, dan harian, ditambah efek liburan. Model ini berfungsi paling baik dengan deret waktu yang memiliki efek musiman yang kuat dan data historis beberapa musim.
 
 ## RShiny
 ...
