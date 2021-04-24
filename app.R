@@ -34,14 +34,8 @@ ui <- dashboardPage(
                   selectInput('val', 'Variables:', c('Season', 'Weekend', 'Holiday', 'Weather')),
                   
                   footer = ''),
-              box(status = 'primary', title = 'eda-plot', 
-                  selectInput('val2', 'Variables:', c('T1', 'T2', 'Humidity', 'Wind Speed')),
-                  
-                  footer = ''),
               #Boxes to display the plots
-              box(plotOutput('barPlot'),
-              box(plotOutput('plot2'))))))
-)
+              box(plotOutput('barPlot'))))))
 # R Shiny server
 server <- function(input, output) {
   
