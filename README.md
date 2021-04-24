@@ -103,6 +103,20 @@ Kesimpulan Analisa:
 #### Theory
 Prophet adalah prosedur untuk meramalkan data deret waktu berdasarkan model aditif di mana tren non-linier sesuai dengan musim tahunan, mingguan, dan harian, ditambah efek liburan. Model ini berfungsi paling baik dengan deret waktu yang memiliki efek musiman yang kuat dan data historis beberapa musim.
 
+#### Evaluation
+
+
+#### Result
+<img src="pictures/plot_forecast.png" width="450">
+
+<img src="pictures/Rplot_pred_actual.png" width="450">
+
+<img src="pictures/forecast_components.png" width="450">
+
+
+#### Summary
+
+
 ## RShiny
 ...
 
