@@ -2,7 +2,7 @@ install.packages("prophet")
 library(prophet)
 library(lubridate)
 
-londonBike <- read.csv("C:\\Users\\TOSHIBA\\Downloads\\UPH\\SEM 5\\Riset Operasional\\R Data\\london_merged.csv", header = TRUE)
+londonBike <- read.csv("C:\\Users\\prisc\\OneDrive\\Documents\\SEM 5\\ROK\\london_merged.csv", header = TRUE)
 
 testData <- subset(londonBike, select = c(timestamp, cnt))
 
@@ -22,3 +22,10 @@ tail(forecast[c('ds', 'yhat', 'yhat_lower', 'yhat_upper')])
 plot(model1, forecast)
 
 prophet_plot_components(model1, forecast)
+
+pred <- forecast$yhat[1:17414]
+actual <- testData[,2]
+plot(actual, pred)
+
+abline(lm(pred~actual), col = 'red')
+summary(lm(pred~actual))
