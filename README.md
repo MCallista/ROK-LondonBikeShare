@@ -175,7 +175,7 @@ Kode untuk pengerjaan R Shiny dapat dilihat di [appV2.R](appV2.R)
 #### Group 4 London Bike Share - Kontribusi
 - Michelle Callista - Pengerjaan EDA (Correlation & Perbandingan Waktu) dan RShiny (Tampilan Prediction)
 - Muhammad Marzuqi Laksamana - Pengerjaan RShiny (Tampilan EDA)
-- Patrick Widyanto Oetomo - 
+- Patrick Widyanto Oetomo - Pengerjaan Machine Learning (Prediction)
 - Peter Iskandar - Pengerjaan EDA (Perbandingan variabel dalam dataset)
 - Priscilla Agustin - Pengerjaan Machine Learning (Prediction)
 
