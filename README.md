@@ -101,7 +101,32 @@ Kesimpulan Analisa:
 
 ### Prophet
 #### Theory
-Prophet adalah prosedur untuk meramalkan data deret waktu berdasarkan model aditif di mana tren non-linier sesuai dengan musim tahunan, mingguan, dan harian, ditambah efek liburan. Model ini berfungsi paling baik dengan deret waktu yang memiliki efek musiman yang kuat dan data historis beberapa musim.
+Prophet adalah prosedur untuk meramalkan data deret waktu berdasarkan model aditif dimana tren non-linier sesuai dengan musim tahunan, mingguan, dan harian, dan efek liburan. Model ini berfungsi paling baik dengan deret waktu yang memiliki efek musiman yang kuat dan data historis beberapa musim. Jadi bisa disimpulkan prophet itu melihat data yang ada pada sebelum-nya sehingga kita dapat melihat dan menganalisa untuk kedepannya.
+
+Kami menggunakan model deret waktu yang dapat diuraikan dengan 3 komponen model utama, yaitu: tren, musim, dan hari libur, yang dapat dituliskan melalui persamaan berikut:
+
+y(t) = g(t) + s(t) + h(t) +εt
+
+g(t): perubahan non-periodik dalam nilai deret waktu
+
+s(t): perubahan periodik (contohnya musiman, mingguan, tahunan)
+
+h(t): efek liburan yang terjadi pada jadwal, yang berpotensi membuat ketidakteraturan 
+
+εt    : perubahan yang tidak biasa yang tidak diakomodasi oleh model
+
+-Tren
+
+ Kita dapat melihat dari kurva linier, pemerhatian dari dalam kurva linier ini dapat memastikan sesuatu hal paling terpengaruh atau tidak terpengaruh oleh lonjakan data. Contohnya jika kita bicara mengenai tren, ada beberapa titik dimana suatu perubahan akan terjadi secara drastis atau dengan kata lain terjadinya lonjakan perubahan. Ini yang menyebabkan terjadinya lonjakan data pada kurva linier tadi.
+ 
+-Musim
+
+Dalam hal ini musim juga berpengaruh pada kegiatan manusia, kita bisa melihat ada empat musim yang berbeda, dan dari keempat musim ini masing-masing musim memiliki pengaruhnya sendiri-sendiri pada kegiatan manusia. Selain itu mengenai musim kita juga bisa melihat musim yang terjadi berdasarkan tahunan, mingguan, harian.Itu semua bisa kita lihat dengan menggunakan prophet.
+
+-Hari libur
+
+Hari libur dan event dapat menimbulkan suatu keramaian dan lonjakan dalam suatu rangkaian waktu, ini dikarenakan pada hari libur orang-orang pergi berbelanja dan membeli banyak barang selama periode tersebut. Dengan prophet kita dapat mengubah dan memprediksi pasar mengikuti tema hari libur atau event tersebut, kita juga dapat membandingkan dengan tahun yang sebelumnya ada, kita bisa menggunakan tema yang lagi trend pada musim yang akan datang untuk membuat suasana acara dan efek liburan yang berbeda setiap tahun. Dengan kata lain kita juga bisa melihat dan menganalisa tahun kedepannya.
+
 
 #### Evaluation
 Model prediksi yang digunakan adalah prophet, serta menggunakan regressor temperature dan humidity. Kami membuat prediksi selama 90 hari ke depan untuk tiap jamnya (atau selama 2160 jam). Sebelum menambahkan regressor, nilai multiple R-squared sebesar 0.591, dan setelah menambahkan regressor, nilai multiple R-squared sebesar 0.6261. 
