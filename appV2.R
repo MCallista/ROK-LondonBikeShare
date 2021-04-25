@@ -180,7 +180,7 @@ ui <- dashboardPage(
                 box(title = "Predict Parameters", status = "info",
                     #paramater: periods
                     numericInput("periods","periods",value=24),
-                    p("Note: Frequency in hours"),
+                    p("Note: Period in hours"),
                     actionButton("predButton", "Predict")),
                 
                 tabBox( id = "tabset2", height = "500px",
