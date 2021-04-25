@@ -106,8 +106,11 @@ Prophet menggunakan model deret waktu yang dapat diuraikan dengan 3 komponen mod
 y(t) = g(t) + s(t) + h(t) +εt
 
 g(t): perubahan non-periodik dalam nilai deret waktu
+
 s(t): perubahan periodik (contohnya musiman, mingguan, tahunan)
+
 h(t): efek liburan yang terjadi pada jadwal, yang berpotensi membuat ketidakteraturan 
+
 εt    : perubahan yang tidak biasa yang tidak diakomodasi oleh model
 	
 - Tren
