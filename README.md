@@ -157,4 +157,4 @@ R squared adalah bilangan yang berkisar antara 0 sampai 1 yang mengindikasikan b
 #### Other
 [Link to London Bike Share Dataset](https://www.kaggle.com/hmavrodiev/london-bike-sharing-dataset)
 [Reference for Prophet Model]
-
+[Link to Prophet Reference](https://peerj.com/preprints/3190/)
