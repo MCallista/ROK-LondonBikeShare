@@ -17,18 +17,22 @@ wind <- (londonBike %>% group_by(wind_speed))%>%summarise(cnt = mean(cnt))
 londonBike2 <- separate(londonBike, timestamp, c("date", "time"), sep = " ", drop(FALSE))
 londonBike2 <- separate(londonBike2, date, c("year", "month", "date"), sep = "-")
 londonBike2 <- separate(londonBike2, time, c("hour"), sep = ":")
-date = substr(londonBike2$timestamp,1,10)
-days <- weekdays(as.Date(date))
-londonBike2$timestamp = days
-
+date1=substr(londonBike2$timestamp,1,10)
+days <- weekdays(as.Date(date1))
+londonBike2$days = days
+date <- (londonBike2 %>% group_by(date))%>%summarise(cnt = mean(cnt))
+days <- (londonBike2 %>% group_by(days))%>%summarise(cnt = mean(cnt))
+month <- (londonBike2 %>% group_by(month))%>%summarise(cnt = mean(cnt))
+year <- (londonBike2 %>% group_by(year))%>%summarise(cnt = mean(cnt))
+hour <- (londonBike2 %>% group_by(hour))%>%summarise(cnt = mean(cnt))
 #R Shiny ui
 ui <- dashboardPage(
   
   #Dashboard title
   dashboardHeader(title = 'BIKE SHARING EXPLORER', 
-                  titleWidth = 290),
+                  titleWidth = 500),
   #Sidebar layout
-  dashboardSidebar(width = 290,
+  dashboardSidebar(width = 500,
                    sidebarMenu(menuItem("Plots", tabName = "plots", icon = icon('poll')))),
   #Tabs layout
   dashboardBody(
@@ -92,24 +96,24 @@ server <- function(input, output) {
            xlab = "wind speed", ylab = "cnt", main = "Bike share according to wind speed", col = "blue")
     }
     if(val == 'dt'){
-      boxplot(cnt~date,data=londonBike2, main="Bike Share to Date", 
-              xlab="Date", ylab="Bike Share count", col=rainbow(31, alpha=0.2))
+      barplot(height=date$cnt, names=date$days, col=rainbow(31, alpha=0.2), 
+              xlab="Date", ylab="Average Bike share", main="Bike share according to date")
     }
     if(val == 'dw'){
-      boxplot(cnt~days,data=londonBike2, main="Bike Share to Days",
-              xlab="Day", ylab="Bike Share count", col=rainbow(7, alpha=0.2))
+      barplot(height=days$cnt, names=days$days, col=rainbow(7, alpha=0.2), 
+              xlab="Days", ylab="Average Bike share", main="Bike share according to days")
     }
     if(val == 'mn'){
-      boxplot(cnt~month,data=londonBike2, main="Bike Share to Month", 
-              xlab="Month", ylab="Bike Share count", col=rainbow(12, alpha=0.2))
+      barplot(height=month$cnt, names=month$month, col=rainbow(12, alpha=0.2), 
+              xlab="Month", ylab="Average Bike share", main="Bike share according to month")
     }
     if(val == 'yr'){
-      boxplot(cnt~year,data=londonBike2, main="Bike Share to Year", 
-              xlab="Year", ylab="Bike Share count", col=rainbow(3, alpha=0.2))
+      barplot(height=year$cnt, names=year$year, col=rainbow(3, alpha=0.2), 
+              xlab="Year", ylab="Average Bike share", main="Bike share according to year")
     }
     if(val == 'hr'){
-      boxplot(cnt~hour,data=londonBike2, main="Bike Share to Hour", 
-              xlab="Hour", ylab="Bike Share count", col=rainbow(24, alpha=0.2))
+      barplot(height=hour$cnt, names=hour$days, col=rainbow(24, alpha=0.2), 
+              xlab="Hour", ylab="Average Bike share", main="Bike share according to hour")
     }
   })
 }
