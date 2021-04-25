@@ -155,6 +155,8 @@ Grafik di atas menggambarkan kinerja atau performansi dari model yang telah dibu
 
 #### Tampilan Prediksi
 
+## Other
+
 #### Group 4 London Bike Share 
 #### Kontribusi
 - Michelle Callista - Pengerjaan EDA (Correlation & Perbandingan Waktu) dan RShiny (Tampilan Prediction)
@@ -163,7 +165,10 @@ Grafik di atas menggambarkan kinerja atau performansi dari model yang telah dibu
 - Peter Iskandar - Pengerjaan EDA (Perbandingan variabel dalam dataset)
 - Priscilla Agustin - Pengerjaan Machine Learning (Prediction)
 
-#### Other
+#### Links and Reference
+
 [Link to London Bike Share Dataset](https://www.kaggle.com/hmavrodiev/london-bike-sharing-dataset)
 
-[Link to Prophet Model Paper](https://peerj.com/preprints/3190/) - [Reference for Prophet Model]
+Referensi for Prophet model
+Taylor SJ, Letham B. 2017. Forecasting at scale. PeerJ Preprints 5:e3190v2 https://doi.org/10.7287/peerj.preprints.3190v2
+[Link to Prophet Model Paper](https://peerj.com/preprints/3190/)
