@@ -183,7 +183,7 @@ Kode untuk pengerjaan R Shiny dapat dilihat di [appV2.R](appV2.R)
 
 [Link to London Bike Share Dataset](https://www.kaggle.com/hmavrodiev/london-bike-sharing-dataset)
 
-Referensi for Prophet model
+Reference for Prophet model
 
 Taylor SJ, Letham B. 2017. Forecasting at scale. PeerJ Preprints 5:e3190v2 https://doi.org/10.7287/peerj.preprints.3190v2
 
