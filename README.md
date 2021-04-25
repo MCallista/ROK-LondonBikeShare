@@ -100,7 +100,7 @@ Kode untuk grafik bagian perbandingan data dapat dilihat di [bikeShareComp.R](bi
 
 Kesimpulan Analisa:
 - Seperti yang telah dijelaskan pada bagian Correlation dan Comparison, variabel yang memiliki hubungan paling signifikan dengan penggunaan bike share adalah oleh data t1 (suhu), t2 (suhu yang dirasakan), dan humidity. [Untuk variabel numerik] 
-- Selain ketiga variabel diatas, untuk data bertipe kategorikal seperti ...
+- Selain ketiga variabel diatas, untuk data bertipe kategorikal seperti season, weekend, holiday, dan weather juga memiliki pengaruh walaupun belum dapat ditentukan secara pasti karena belum mencoba menggunakan test. Begitu pula dengan date, day, month, year dan hour, variabel yang cukup berpengaruh adalah hour, month dan sedikit untuk day. Selain itu, tidak terlihat perbedaan yang signifikan untuk tiap data.
 
 ## Machine Learning & Prediction
 
