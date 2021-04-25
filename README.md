@@ -99,8 +99,8 @@ Terakhir adalah perbandingan penggunaan bike share dengan jam di hari tersebut. 
 Kode untuk grafik bagian perbandingan data dapat dilihat di [bikeShareComp.R](bikeShareComp.R)
 
 Kesimpulan Analisa:
-- X
-- Y
+- Seperti yang telah dijelaskan pada bagian Correlation dan Comparison, variabel yang memiliki hubungan paling signifikan dengan penggunaan bike share adalah oleh data t1 (suhu), t2 (suhu yang dirasakan), dan humidity. [Untuk variabel numerik] 
+- Selain ketiga variabel diatas, untuk data bertipe kategorikal seperti ...
 
 ## Machine Learning & Prediction
 
@@ -119,12 +119,15 @@ h(t): efek liburan yang terjadi pada jadwal, yang berpotensi membuat ketidaktera
 εt    : perubahan yang tidak biasa yang tidak diakomodasi oleh model
 	
 - Tren
- Kita dapat melihat dari kurva linier, pemerhatian dari dalam kurva linier ini dapat memastikan sesuatu hal paling terpengaruh atau tidak terpengaruh oleh lonjakan data. Contohnya jika kita bicara mengenai tren, ada beberapa titik dimana suatu perubahan akan terjadi secara drastis atau dengan kata lain terjadinya lonjakan perubahan. Ini yang menyebabkan terjadinya lonjakan data pada kurva linier tadi.
+
+Kita dapat melihat dari kurva linier, pemerhatian dari dalam kurva linier ini dapat memastikan sesuatu hal paling terpengaruh atau tidak terpengaruh oleh lonjakan data. Contohnya jika kita bicara mengenai tren, ada beberapa titik dimana suatu perubahan akan terjadi secara drastis atau dengan kata lain terjadinya lonjakan perubahan. Ini yang menyebabkan terjadinya lonjakan data pada kurva linier tadi.
 
 - Musim
+
 Dalam hal ini musim juga berpengaruh pada kegiatan manusia, kita bisa melihat ada empat musim yang berbeda, dan dari keempat musim ini masing-masing musim memiliki pengaruhnya sendiri-sendiri pada kegiatan manusia. Selain itu mengenai musim kita juga bisa melihat musim yang terjadi berdasarkan tahunan, mingguan, harian. Itu semua bisa kita lihat dengan menggunakan prophet.
 
 - Hari libur
+
 Hari libur dan event dapat menimbulkan suatu keramaian dan lonjakan dalam suatu rangkaian waktu, ini dikarenakan pada hari libur orang-orang pergi berbelanja dan membeli banyak barang selama periode tersebut. Dengan prophet kita dapat mengubah dan memprediksi pasar mengikuti tema hari libur atau event tersebut, kita juga dapat membandingkan dengan tahun yang sebelumnya ada, kita bisa menggunakan tema yang lagi trend pada musim yang akan datang untuk membuat suasana acara dan efek liburan yang berbeda setiap tahun. Dengan kata lain kita juga bisa melihat dan menganalisa tahun kedepannya.
 
 Manfaat penting dari model yang dapat didekomposisi adalah memungkinkan kita untuk melihat setiap komponen prediksi secara terpisah. Komponen-komponen tersebut antara lain adalah tren, musim mingguan, dan musim tahunan. Hal tersebut sangat berguna bagi para analis untuk mendapatkan wawasan tentang masalah peramalannya, selain hanya menghasilkan prediksi. 
@@ -157,8 +160,7 @@ Grafik di atas menggambarkan kinerja atau performansi dari model yang telah dibu
 
 ## Other
 
-#### Group 4 London Bike Share 
-#### Kontribusi
+#### Group 4 London Bike Share - Kontribusi
 - Michelle Callista - Pengerjaan EDA (Correlation & Perbandingan Waktu) dan RShiny (Tampilan Prediction)
 - Muhammad Marzuqi Laksamana - Pengerjaan RShiny (Tampilan EDA)
 - Patrick Widyanto Oetomo - 
