@@ -153,7 +153,7 @@ R squared adalah bilangan yang berkisar antara 0 sampai 1 yang mengindikasikan b
 - Muhammad Marzuqi Laksamana - Pengerjaan RShiny (Tampilan EDA)
 - Patrick Widyanto Oetomo - 
 - Peter Iskandar - Pengerjaan EDA (Perbandingan variabel dalam dataset)
-- Priscilla Agustin - 
+- Priscilla Agustin - Pengerjaan Machine Learning (Prediction)
 
 #### Other
 [Link to London Bike Share Dataset](https://www.kaggle.com/hmavrodiev/london-bike-sharing-dataset)
