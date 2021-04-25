@@ -128,6 +128,7 @@ Manfaat penting dari model yang dapat didekomposisi adalah memungkinkan kita unt
 #### Evaluation
 Model prediksi yang digunakan adalah prophet, serta menggunakan regressor temperature dan humidity. Kami membuat prediksi selama 90 hari ke depan untuk tiap jamnya (atau selama 2160 jam). Sebelum menambahkan regressor, nilai multiple R-squared sebesar 0.591, dan setelah menambahkan regressor, nilai multiple R-squared sebesar 0.6261. 
 R squared adalah bilangan yang berkisar antara 0 sampai 1 yang mengindikasikan besarnya kombinasi variabel independen secara bersama – sama mempengaruhi nilai variabel dependen. Semakin besar bilangan R squared (mendekati angka satu), model yang dikeluarkan akan semakin baik.
+<img src="pictures/multiple_R_squared.png" width="450">
 
 #### Result
 <img src="pictures/plot_forecast.png" width="450">
