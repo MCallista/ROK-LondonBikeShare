@@ -158,6 +158,12 @@ Kode untuk pengerjaan prediksi pada model Prophet dapat dilihat di [predictionPr
 
 #### Tampilan EDA
 
+Pada bagian EDA di R Shiny terdapat tiga bagian. Pertama bagian penjelasan tabpanel "Penjelasan Data [EDA]" yang mendeskripsikan barplot EDA yang terdapat pada tab plots. Tabpanel ini terdapat 3 parts, part pertama menjelaskan tentang variabel Season, Weekend, Holiday, dan Weather, part kedua untuk variabel T1, T2, Humidity, dan Wind speed, dan part terakhir untuk variabel Date, Day of Week, Month, Year, dan Hour.
+
+Bagian kedua box yang berisi tentang input untuk menentukan variabel. Variabel ini akan menentukan barplot EDA yang ditampilkan. Variabel ini berbentuk select input dan berisi Season, Weekend, Holiday, Weather, T1, T2, Humidity, Wind Speed, Date, Date of Week, Month, Year, dan Hour.
+
+Bagian terakhir adalah box untuk output barplot EDA.
+
 #### Tampilan Prediksi
 
 Dilanjutkan pada bagian prediksi dari R Shiny. Pada sidebar ditambahkan opsi "Prediction" yang akan terlihat seperti gambar di bawah ini. Disini pengguna dapat menyesuaikan periode yang ingin diprediksi pada model. Periode yang disediakan hanya prediksi tiap jam karena menyesuaikan dengan data yang ada sebelumnya. Setelah periode diinput, tombol "Predict" dapat di klik dan diagram prediksi hasil model prophet dapat dilihat di bagian kanan. Disini pengguna dapat berinteraksi dengan diagram, melihat nilai prediksi dan membesarkan diagram pada bagian yang diinginkan.
