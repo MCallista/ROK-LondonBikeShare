@@ -81,12 +81,15 @@ Sama juga dengan halnya hubungan rata-rata bike share dengan t2(temperature feel
 Selanjutnya di line plot yang ketiga, bisa dilihat bahwa cnt atau rata-rata peminjaman sepeda mengalami penurunan saat humidity mengalami kenaikan. 
 Line plot yang terakhir memiliki hubungan antara cnt dengan wind speed. Tidak seperti line plot sebelumnya, line plot ini mengalami beberapa kenaikan dan penurunan yang drastic. Misalnya disaat windspeed 10, 14, 25, 38, dan 42,memiliki jumlah cnt yang tinggi tetapi saat di 11, 15, 31, 50, dan 52, terjadi penurunan dalam jumlah cnt.
 
+
+
 Selanjutnya akan dianalisa dengan variabel waktu yang diberikan. Data ini merupakan sebuah data time series, data yang memiliki time stamp atau diurutkan berdasarkan waktu. Pada bagian Correlation, belum sempat dibahas apakah ada hubungan antara jumlah Bike Share dan waktu. Disini akan dilakukan analisa dengan membandingkan rata-rata bike share dengan tanggal, hari, bulan, tahun, dan jam. 
 
 <img src="pictures/DateBar.png" width="450"> <img src="pictures/DaysBar.png" width="450"> 
 <img src="pictures/MonthBar.png" width="450"> <img src="pictures/YearBar.png" width="450">
 
 Pada grafik pertama, "Bike share according to date", tidak ada banyak korelasi atau hubungan yang dapat dilihat dengan rata-rata jumlah bike share. Hal ini kemungkinan terjadi karena tanggal dalam sebuah bulan tidak terlalu menentukan apakah seseorang akan menggunakan sepeda. Misalnya tanggal 2 bisa jatuh pada hari kerja atau hari libur. Oleh karena itu, akan dilanjutkan dengan perbandingan jumlah bike share dengan hari (Senin, Selasa, dan seterusnya). Pada grafik "Bike share according to days", dapat dilihat bahwa terdapat sedikit penurunan rata-rata jumlah bike share pada hari Sabtu dan Minggu. Sesuai dengan bar plot "Bike share according to weekend" yang telah dijelaskan sebelumnya, memang terdapat penggunaan yang lebih tinggi pada hari kerja. 
+
 Selanjutnya adalah perbandingan penggunaan bike share dengan bulan. Dalam grafik ini dapat dilihat bahwa terdapat sedikit kenaikan pada bulan 6 (Juni) - 9 (September). Jika kita lihat lebih lanjut, bulan ini adalah musim panas (Summer) dan bisa di lihat kembali pada grafik "Bike share according to season" bahwa musim dengan penggunaan tertinggi adalah dengan kode 1 (Summer). Perbandingan dilanjutkan dengan variabel tahun. Data bike share yang digunakan terdiri atas 3 tahun (2015-2017) namun sebenarnya data ini secara keseluruhan hanya berjumlah 2 tahun. Hal ini karena data dimulai dari 4 Januari 2015 - 4 Januari 2017. Jika dilihat dari grafik diatas, tidak terdapat perbedaan yang signifikan antara tahun 2015 dan 2016. Sedangkan untuk tahun 2017 memiliki penurunan yang jauh disebabkan oleh datanya yang hanya mengandung 4 hari penggunaan pada tahun tersebut.
 
 <img src="pictures/HourBar.png" width="450">
@@ -144,19 +147,15 @@ R squared adalah bilangan yang berkisar antara 0 sampai 1 yang mengindikasikan b
 ## RShiny
 ...
 
-#### Kontribusi
-
-
 #### Group 4 London Bike Share 
-- Michelle Callista
-- Muhammad Marzuqi Laksamana
-- Patrick Widyanto Oetomo
-- Peter Iskandar
-- Priscilla Agustin 
+#### Kontribusi
+- Michelle Callista - Pengerjaan EDA (Correlation & Perbandingan Waktu) dan RShiny (Tampilan Prediction)
+- Muhammad Marzuqi Laksamana - Pengerjaan RShiny (Tampilan EDA)
+- Patrick Widyanto Oetomo - 
+- Peter Iskandar - Pengerjaan EDA (Perbandingan variabel dalam dataset)
+- Priscilla Agustin - 
 
 #### Other
 [Link to London Bike Share Dataset](https://www.kaggle.com/hmavrodiev/london-bike-sharing-dataset)
-[Reference for Prophet Model]
 
-[Link to Forecasting at Scale](https://peerj.com/preprints/3190/)
-[Reference for Prophet]
+[Link to Forecasting at Scale](https://peerj.com/preprints/3190/) - [Reference for Prophet Model]
