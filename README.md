@@ -5,8 +5,8 @@ Prediksi pengguna Bike Share
 Dalam laporan ini, akan dibahas data London Bike Share mulai dari analisa data, penggunaan model untuk melakukan prediction, dan membuat tampilan pada RShiny. Dalam melakukan analisa dan prediksi akan ada beberapa pertanyaan yang akan dibahas dan dicari. Beberapa hal yang akan dicoba untuk dicari adalah sebagai berikut:
 1. Variabel yang memiliki hubungan (pengaruh) dengan jumlah Bike Share
 2. Model machine learning yang dapat digunakan untuk melakukan prediksi beserta evaluasi
-3. Prediksi penggunaan Bike Share ± 1 tahun kedepan berdasarkan penggunaan di 2 tahun awal
-4. Prediksi penggunaan Bike Share berdasarkan variabel yang memiliki pengaruh (nomor 1)
+3. Prediksi penggunaan Bike Share per jam untuk ± 3 bulan kedepan berdasarkan penggunaan di 2 tahun awal
+4. Prediksi penggunaan Bike Share per jam berdasarkan variabel yang memiliki pengaruh (nomor 1)
 
 ## Exploratory Data Analysis
 
@@ -69,7 +69,7 @@ Pada bagian ini akan dianalisa lebih lanjut hubungan antara variabel yang ada de
 <img src="pictures/season.png" width="450"> <img src="pictures/weekend.png" width="450"> 
 <img src="pictures/holiday.png" width="450"> <img src="pictures/weather.png" width="450"> 
 
-Setelah data dibuat dalam bentuk barplot dan dianalisa, terdapat hal-hal yang membuat peminjaman sepeda meningkat ataupun menurun. Jika dilihat dari peminjaman sepeda pada musim yang berbeda, terdapat perbedaan rata-rata dalam jumlah peminjaman sepeda. Dari barplot bisa diambil bahwa rata-rata paling banyak saat musim 1 (summer) dan kebalikannya, yang paling sedikit saat musim 3 (winter). Selain itu, peminjaman sepeda juga terdampak dari apakah sedang weekend atau tidak, dimana 0 (not weekend)  mengalami rata-rata jumlah peminjamaan yang lebih banyak. Barplot juga menjelaskan bahwa rata-rata jumlah peminjaman sepeda pada hari libur lebih banyak dibandingkan saat hari biasa. Dan terakhir adalah peminjaman sepeda menurut cuaca. Yang bisa kami ambil adalah nomor 2 (cattered clouds / few clouds) memiliki rata-rata peminjaman sepeda yang paling banyak dibandingkan yang lan terutama saat cuaca 26 (snowfall). 
+Setelah data dibuat dalam bentuk barplot dan dianalisa, terdapat hal-hal yang membuat peminjaman sepeda meningkat ataupun menurun. Jika dilihat dari peminjaman sepeda pada musim yang berbeda, terdapat perbedaan rata-rata dalam jumlah peminjaman sepeda. Dari barplot bisa diambil bahwa rata-rata paling banyak saat musim 1 (summer) dan kebalikannya, yang paling sedikit saat musim 3 (winter). Selain itu, peminjaman sepeda juga terdampak dari apakah sedang weekend atau tidak, dimana 0 (not weekend)  mengalami rata-rata jumlah peminjamaan yang lebih banyak. Barplot juga menjelaskan bahwa rata-rata jumlah peminjaman sepeda pada hari libur lebih banyak dibandingkan saat hari biasa. Dan terakhir adalah peminjaman sepeda menurut cuaca. Yang bisa kami ambil adalah nomor 2 (scattered clouds / few clouds) memiliki rata-rata peminjaman sepeda yang paling banyak dibandingkan yang lan terutama saat cuaca 26 (snowfall). 
 
 Selanjutnya analisa akan dilanjutkan dengan variabel t1, t2, hum, dan wind_speed. Hubungan antara variabel ini dengan jumlah bike share sempat dilihat pada bagian **Data Dependency**. Kita akan lihat dengan lebih dekat apakah terdapat hubungan antar variabel tersebut dengan jumlah bike share.
 
@@ -78,10 +78,10 @@ Selanjutnya analisa akan dilanjutkan dengan variabel t1, t2, hum, dan wind_speed
 
 Jadi bisa dilihat dari lineplot yang sudah dibuat, rata-rata bike share mengalami kenaikan  disaat t1 atau real temperature mengalami kenaikan juga meskipun terdapat kenaikan dan penurunan saat t1 berada 25 sampai 33. Hubungan rata-rata peminjaman sepeda dengan real temperature mengalami puncaknya saat di t1/real temperature berada di 35 dengan jumlah rata-rata peminjaman sepeda lebih dari 4000.
 Sama juga dengan halnya hubungan rata-rata bike share dengan t2(temperature feels like), dimana rata-rata peminjaman sepeda mengalami kenaikan bersamaan saat t2 mengalami kenaikan juga tetapi terjadi juga kenaikan disaat t2 berada di -5.
-Selanjutnya di line plot yang ketiga, bisa dilihat bahwa cnt atau rata-rata peminjaman sepeda mengalami penurunan saat humidity mengalami kenaikan. 
-Line plot yang terakhir memiliki hubungan antara cnt dengan wind speed. Tidak seperti line plot sebelumnya, line plot ini mengalami beberapa kenaikan dan penurunan yang drastic. Misalnya disaat windspeed 10, 14, 25, 38, dan 42,memiliki jumlah cnt yang tinggi tetapi saat di 11, 15, 31, 50, dan 52, terjadi penurunan dalam jumlah cnt.
+Kedua analisa diatas juga bisa didukung  dengan table correlation dimana hubungan t1 dan t2 dengan cnt memiliki korelasi positif yang memiliki arti bahwa jika suatu variable mengalami kenaikan, variable lainnya memiliki kecendurungan untuk naik juga.
 
-
+Selanjutnya di line plot yang ketiga, bisa dilihat bahwa cnt atau rata-rata peminjaman sepeda mengalami penurunan saat humidity mengalami kenaikan. Hasil tersebut juga bisa diambil dari table korelasi dimana variable cnt dengan humidity memiliki korelasi negative yang memiliki arti bahwa jika suatu variable naik maka variable lainnya akan cenderung mengalami penurunan.
+Line plot yang terakhir memiliki hubungan antara cnt dengan wind speed. Tidak seperti line plot sebelumnya, line plot ini mengalami beberapa kenaikan dan penurunan yang drastic.  Seperti yang sudah dijelaskan di bagian korelasi, variable cnt dengan windspeed, tidak memiliki hubungan yang pasti karena pada table korelasi, angka korelasi antara kedua variable tidak besar yaitu sekitar 0,1.
 
 Selanjutnya akan dianalisa dengan variabel waktu yang diberikan. Data ini merupakan sebuah data time series, data yang memiliki time stamp atau diurutkan berdasarkan waktu. Pada bagian Correlation, belum sempat dibahas apakah ada hubungan antara jumlah Bike Share dan waktu. Disini akan dilakukan analisa dengan membandingkan rata-rata bike share dengan tanggal, hari, bulan, tahun, dan jam. 
 
@@ -95,6 +95,8 @@ Selanjutnya adalah perbandingan penggunaan bike share dengan bulan. Dalam grafik
 <img src="pictures/HourBar.png" width="450">
 
 Terakhir adalah perbandingan penggunaan bike share dengan jam di hari tersebut. Ini menjadi salah satu variabel yang dipertimbangkan karena salah satu asumsi yang dipikirkan adalah bahwa bike share digunakan oleh orang yang bekerja. Dapat dilihat pada grafik diatas, penggunaan bike share paling tinggi berada pada jam 8 pagi dan jam 5-6 sore. Perlu diingat bahwa jam tersebut adalah sekitaran jam berangkat kerja dan jam pulang kerja. Oleh karena itu terdapat peningkatan pengunaan bike share yang cukup signifikan pada periode tersebut. Begitu pula dengan penggunaan bike share yang sangat rendah pada jam 12 malam sampai jam 5 pagi. Hal ini kemungkinan besar terjadi karena jam tersebut adalah jam tidur untuk kebanyakan orang.
+
+Kode untuk grafik bagian perbandingan data dapat dilihat di [bikeShareComp.R](bikeShareComp.R)
 
 Kesimpulan Analisa:
 - X
@@ -117,13 +119,12 @@ h(t): efek liburan yang terjadi pada jadwal, yang berpotensi membuat ketidaktera
 εt    : perubahan yang tidak biasa yang tidak diakomodasi oleh model
 	
 - Tren
- 
  Kita dapat melihat dari kurva linier, pemerhatian dari dalam kurva linier ini dapat memastikan sesuatu hal paling terpengaruh atau tidak terpengaruh oleh lonjakan data. Contohnya jika kita bicara mengenai tren, ada beberapa titik dimana suatu perubahan akan terjadi secara drastis atau dengan kata lain terjadinya lonjakan perubahan. Ini yang menyebabkan terjadinya lonjakan data pada kurva linier tadi.
+
 - Musim
-
 Dalam hal ini musim juga berpengaruh pada kegiatan manusia, kita bisa melihat ada empat musim yang berbeda, dan dari keempat musim ini masing-masing musim memiliki pengaruhnya sendiri-sendiri pada kegiatan manusia. Selain itu mengenai musim kita juga bisa melihat musim yang terjadi berdasarkan tahunan, mingguan, harian. Itu semua bisa kita lihat dengan menggunakan prophet.
-- Hari libur
 
+- Hari libur
 Hari libur dan event dapat menimbulkan suatu keramaian dan lonjakan dalam suatu rangkaian waktu, ini dikarenakan pada hari libur orang-orang pergi berbelanja dan membeli banyak barang selama periode tersebut. Dengan prophet kita dapat mengubah dan memprediksi pasar mengikuti tema hari libur atau event tersebut, kita juga dapat membandingkan dengan tahun yang sebelumnya ada, kita bisa menggunakan tema yang lagi trend pada musim yang akan datang untuk membuat suasana acara dan efek liburan yang berbeda setiap tahun. Dengan kata lain kita juga bisa melihat dan menganalisa tahun kedepannya.
 
 Manfaat penting dari model yang dapat didekomposisi adalah memungkinkan kita untuk melihat setiap komponen prediksi secara terpisah. Komponen-komponen tersebut antara lain adalah tren, musim mingguan, dan musim tahunan. Hal tersebut sangat berguna bagi para analis untuk mendapatkan wawasan tentang masalah peramalannya, selain hanya menghasilkan prediksi. 
@@ -131,21 +132,28 @@ Manfaat penting dari model yang dapat didekomposisi adalah memungkinkan kita unt
 #### Evaluation
 Model prediksi yang digunakan adalah prophet, serta menggunakan regressor temperature dan humidity. Kami membuat prediksi selama 90 hari ke depan untuk tiap jamnya (atau selama 2160 jam). Sebelum menambahkan regressor, nilai multiple R-squared sebesar 0.591, dan setelah menambahkan regressor, nilai multiple R-squared sebesar 0.6261. 
 R squared adalah bilangan yang berkisar antara 0 sampai 1 yang mengindikasikan besarnya kombinasi variabel independen secara bersama – sama mempengaruhi nilai variabel dependen. Semakin besar bilangan R squared (mendekati angka satu), model yang dikeluarkan akan semakin baik.
+
 <img src="pictures/multiple_R_squared.png" width="450">
 
 #### Result
+
 <img src="pictures/plot_forecast.png" width="450">
-  Dari gambar di atas, dapat dilihat bahwa titik-titik hitam adalah poin data aktual, dan garis biru adalah nilai prediksi. Prediksi untuk 90 hari selanjutnya ada di bagian akhir garis biru (setelah 2017-01). 
+
+Dari gambar di atas, dapat dilihat bahwa titik-titik hitam adalah poin data aktual, dan garis biru adalah nilai prediksi. Prediksi untuk 90 hari selanjutnya ada di bagian akhir garis biru (setelah 2017-01). 
   
 <img src="pictures/forecast_components.png" width="450">
-  Grafik di atas merupakan komponen dari model time series ini. Dari gambar di atas, kita dapat melihat tren yang secara keseluruhan mengalami kenaikan. Grafik weekly menunjukkan jumlah rental sepeda setiap harinya dalam 1 minggu.  Pada grafik tersebut, dapat ditarik kesimpulan bahwa jumlah rental sepeda pada hari Kamis dan Jumat relatif lebih tinggi dibandingkan hari lainnya, sedangkan jumlah rental sepeda pada hari Minggu paling rendah. Grafik yearly menunjukkan jumlah rental sepeda pada tiap musim sepanjang tahun. Dapat dilihat bahwa jumlah rental sepeda pada bulan Januari (musim dingin) lebih rendah dibandingkan musim lainnya, dan jumlah rental sepeda sekitar bulan Juli (musim panas) tinggi. Grafik daily menunjukkan jumlah rental sepeda pada tiap jam selama 1 hari. Berdasarkan grafik, jumlah rental sepeda pada jam 8 dan 18 relatif lebih tinggi dibandingkan jam lainnya. Grafik terakhir adalah grafik dari ekstra regressor yang digabungkan menjadi 1 (humidity dan temperature). 
+
+Grafik di atas merupakan komponen dari model time series ini. Dari gambar di atas, kita dapat melihat tren yang secara keseluruhan mengalami kenaikan. Grafik weekly menunjukkan jumlah rental sepeda setiap harinya dalam 1 minggu.  Pada grafik tersebut, dapat ditarik kesimpulan bahwa jumlah rental sepeda pada hari Kamis dan Jumat relatif lebih tinggi dibandingkan hari lainnya, sedangkan jumlah rental sepeda pada hari Minggu paling rendah. Grafik yearly menunjukkan jumlah rental sepeda pada tiap musim sepanjang tahun. Dapat dilihat bahwa jumlah rental sepeda pada bulan Januari (musim dingin) lebih rendah dibandingkan musim lainnya, dan jumlah rental sepeda sekitar bulan Juli (musim panas) tinggi. Grafik daily menunjukkan jumlah rental sepeda pada tiap jam selama 1 hari. Berdasarkan grafik, jumlah rental sepeda pada jam 8 dan 18 relatif lebih tinggi dibandingkan jam lainnya. Grafik terakhir adalah grafik dari ekstra regressor yang digabungkan menjadi 1 (humidity dan temperature). 
 
 <img src="pictures/Rplot_pred_actual.png" width="450">
-  Grafik di atas menggambarkan kinerja atau performansi dari model yang telah dibuat, dengan scatter plot antara nilai prediksi dan nilai aktual. Nilai multiple R-squared dari model ini adalah 0.6261. 
 
+Grafik di atas menggambarkan kinerja atau performansi dari model yang telah dibuat, dengan scatter plot antara nilai prediksi dan nilai aktual. Nilai multiple R-squared dari model ini adalah 0.6261. 
 
 ## RShiny
-...
+
+#### Tampilan EDA
+
+#### Tampilan Prediksi
 
 #### Group 4 London Bike Share 
 #### Kontribusi
