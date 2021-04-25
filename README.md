@@ -150,13 +150,21 @@ Grafik di atas merupakan komponen dari model time series ini. Dari gambar di ata
 
 <img src="pictures/Rplot_pred_actual.png" width="450">
 
-Grafik di atas menggambarkan kinerja atau performansi dari model yang telah dibuat, dengan scatter plot antara nilai prediksi dan nilai aktual. Nilai multiple R-squared dari model ini adalah 0.6261. 
+Grafik di atas menggambarkan kinerja atau performansi dari model yang telah dibuat, dengan scatter plot antara nilai prediksi dan nilai aktual. Nilai multiple R-squared dari model ini adalah 0.6261.
+
+Kode untuk pengerjaan prediksi pada model Prophet dapat dilihat di [predictionProphet.R](predictionProphet.R)
 
 ## RShiny
 
 #### Tampilan EDA
 
 #### Tampilan Prediksi
+
+<img src="pictures/shinyForecast.png" width="500">
+
+<img src="pictures/shinyPComp.png" width="500">
+
+Kode untuk pengerjaan R Shiny dapat dilihat di [appV2.R](appV2.R)
 
 ## Other
 
@@ -172,5 +180,7 @@ Grafik di atas menggambarkan kinerja atau performansi dari model yang telah dibu
 [Link to London Bike Share Dataset](https://www.kaggle.com/hmavrodiev/london-bike-sharing-dataset)
 
 Referensi for Prophet model
+
 Taylor SJ, Letham B. 2017. Forecasting at scale. PeerJ Preprints 5:e3190v2 https://doi.org/10.7287/peerj.preprints.3190v2
+
 [Link to Prophet Model Paper](https://peerj.com/preprints/3190/)
