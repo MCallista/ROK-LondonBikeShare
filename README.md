@@ -108,11 +108,13 @@ Prophet adalah prosedur untuk meramalkan data deret waktu berdasarkan model adit
 
 #### Result
 <img src="pictures/plot_forecast.png" width="450">
+  Dari gambar di atas, dapat dilihat bahwa titik-titik hitam adalah poin data aktual, dan garis biru adalah nilai prediksi. Prediksi untuk 90 hari selanjutnya ada di bagian akhir garis biru (setelah 2017-01). 
+  
+<img src="pictures/forecast_components.png" width="450">
+  Grafik di atas merupakan komponen dari model time series ini. Dari gambar di atas, kita dapat melihat tren yang secara keseluruhan mengalami kenaikan. Grafik weekly menunjukkan jumlah rental sepeda setiap harinya dalam 1 minggu.  Pada grafik tersebut, dapat ditarik kesimpulan bahwa jumlah rental sepeda pada hari Kamis dan Jumat relatif lebih tinggi dibandingkan hari lainnya, sedangkan jumlah rental sepeda pada hari Minggu paling rendah. Grafik yearly menunjukkan jumlah rental sepeda pada tiap musim sepanjang tahun. Dapat dilihat bahwa jumlah rental sepeda pada bulan Januari (musim dingin) lebih rendah dibandingkan musim lainnya, dan jumlah rental sepeda sekitar bulan Juli (musim panas) tinggi. Grafik daily menunjukkan jumlah rental sepeda pada tiap jam selama 1 hari. Berdasarkan grafik, jumlah rental sepeda pada jam 8 dan 18 relatif lebih tinggi dibandingkan jam lainnya. Grafik terakhir adalah grafik dari ekstra regressor yang digabungkan menjadi 1 (humidity dan temperature). 
 
 <img src="pictures/Rplot_pred_actual.png" width="450">
-
-<img src="pictures/forecast_components.png" width="450">
-
+  Grafik di atas menggambarkan kinerja atau performansi dari model yang telah dibuat, dengan scatter plot antara nilai prediksi dan nilai aktual. Nilai multiple R-squared dari model ini adalah 0.6261. 
 
 #### Summary
 
