@@ -164,7 +164,7 @@ Bagian kedua box yang berisi tentang input untuk menentukan variabel. Variabel i
 
 Bagian terakhir adalah box untuk output barplot EDA.
 
-<img src="pictures/shinyeda.png" width="500">
+<img src="pictures/shinyeda.PNG" width="500">
 
 #### Tampilan Prediksi
 
