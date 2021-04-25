@@ -104,7 +104,8 @@ Kesimpulan Analisa:
 Prophet adalah prosedur untuk meramalkan data deret waktu berdasarkan model aditif di mana tren non-linier sesuai dengan musim tahunan, mingguan, dan harian, ditambah efek liburan. Model ini berfungsi paling baik dengan deret waktu yang memiliki efek musiman yang kuat dan data historis beberapa musim.
 
 #### Evaluation
-
+Model prediksi yang digunakan adalah prophet, serta menggunakan regressor temperature dan humidity. Kami membuat prediksi selama 90 hari ke depan untuk tiap jamnya (atau selama 2160 jam). Sebelum menambahkan regressor, nilai multiple R-squared sebesar 0.591, dan setelah menambahkan regressor, nilai multiple R-squared sebesar 0.6261. 
+R squared adalah bilangan yang berkisar antara 0 sampai 1 yang mengindikasikan besarnya kombinasi variabel independen secara bersama – sama mempengaruhi nilai variabel dependen. Semakin besar bilangan R squared (mendekati angka satu), model yang dikeluarkan akan semakin baik.
 
 #### Result
 <img src="pictures/plot_forecast.png" width="450">
@@ -115,8 +116,6 @@ Prophet adalah prosedur untuk meramalkan data deret waktu berdasarkan model adit
 
 <img src="pictures/Rplot_pred_actual.png" width="450">
   Grafik di atas menggambarkan kinerja atau performansi dari model yang telah dibuat, dengan scatter plot antara nilai prediksi dan nilai aktual. Nilai multiple R-squared dari model ini adalah 0.6261. 
-
-#### Summary
 
 
 ## RShiny
