@@ -101,16 +101,13 @@ Kesimpulan Analisa:
 
 ### Prophet
 Prophet adalah prosedur untuk meramalkan data deret waktu (time series) berdasarkan model aditif dimana tren non-linier sesuai dengan musim tahunan, mingguan, dan harian, dan efek liburan. Model ini berfungsi paling baik dengan deret waktu yang memiliki efek musiman yang kuat dan data historis beberapa musim. Jadi bisa disimpulkan prophet itu melihat data yang ada pada sebelum-nya sehingga kita dapat melihat dan menganalisa untuk kedepannya.
-Kami menggunakan model deret waktu yang dapat diuraikan dengan 3 komponen model utama, yaitu: tren, musim, dan hari libur, yang dapat dituliskan melalui persamaan berikut:
+Prophet menggunakan model deret waktu yang dapat diuraikan dengan 3 komponen model utama, yaitu: tren, musim, dan hari libur, yang dapat dituliskan melalui persamaan berikut:
 
 y(t) = g(t) + s(t) + h(t) +εt
 
 g(t): perubahan non-periodik dalam nilai deret waktu
-
 s(t): perubahan periodik (contohnya musiman, mingguan, tahunan)
-
 h(t): efek liburan yang terjadi pada jadwal, yang berpotensi membuat ketidakteraturan 
-
 εt    : perubahan yang tidak biasa yang tidak diakomodasi oleh model
 	
 - Tren
