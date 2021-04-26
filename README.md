@@ -180,12 +180,14 @@ Kode untuk pengerjaan R Shiny dapat dilihat di [appV2.R](appV2.R)
 
 ## Other
 
-#### Group 4 London Bike Share - Kontribusi
-- Michelle Callista - Pengerjaan EDA (Correlation & Perbandingan Waktu) dan RShiny (Tampilan Prediction)
-- Muhammad Marzuqi Laksamana - Pengerjaan RShiny (Tampilan EDA)
-- Patrick Widyanto Oetomo - Pengerjaan Machine Learning (Prediction)
-- Peter Iskandar - Pengerjaan EDA (Perbandingan variabel dalam dataset)
-- Priscilla Agustin - Pengerjaan Machine Learning (Prediction)
+#### Group 4 London Bike Share
+NIM | Nama | Kontribusi
+--- | ---- | ----------
+01082190007 | Michelle Callista | Pengerjaan EDA (Correlation & Perbandingan Waktu) dan RShiny (Tampilan Prediction)
+01082190006 | Muhammad Marzuqi Laksamana | Pengerjaan RShiny (Tampilan EDA)
+01082190012 | Patrick Widyanto Oetomo | Pengerjaan Machine Learning (Prediction)
+01082190001 | Peter Iskandar | Pengerjaan EDA (Perbandingan variabel dalam dataset)
+01082190027 | Priscilla Agustin | Pengerjaan Machine Learning (Prediction)
 
 #### Links and Reference
 
