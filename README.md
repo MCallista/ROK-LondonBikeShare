@@ -51,7 +51,7 @@ Pada gambar diatas, dibuat sebuah scatterplot matrix untuk melihat korelasi anta
 
 Perhitungan correlation coefficient dapat dilihat dengan lebih jelas pada tabel di atas. Angka dalam korelasi tersebut menentukan dependency antar variabel. Perhitungan correlation coefficient yang digunakan adalah milik Pearson. Angka positif biasanya menunjukkan positive correlation yang berarti nilai satu variabel akan naik jika yang pasangannya juga naik. Sedangkan angka negatif biasanya menunjukkan negative correlation di mana suatu nilai akan naik jika variabel pasangannya menurun. Kuatnya dependency antar variabel bergantung pada angkanya di mana 1 dan -1 menunjukkan korelasi positif dan negatif yang sempurna, dan 0 menunjukkan tidak adanya korelasi sama sekali. Arti tiap angka dapat dilihat dengan lebih jelas pada tabel berikut:
 
-<img src="pictures/corrCoeff.PNG" width="500">
+<img src="pictures/pearsonCorr.PNG" width="500">
 
 Visualisasi dari correlation table di atas juga dapat dilihat di correlation matrix di bawah ini.
 
